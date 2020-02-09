@@ -7,8 +7,27 @@
 //
 
 import SwiftUI
+import AVFoundation
+
 
 struct ContentView: View {
+    
+    // Player for sound clips.
+    let audioPlayer = AVPlayer()
+    
+    let sounds = ["azadi",
+                  "talaash",
+                  "ishq"]
+    
+    // Play sound helper method.
+    func playSound(filename: String) {
+        guard let url = Bundle.main.url(forResource: filename, withExtension: "") else { return }
+        
+        let playerItem = AVPlayerItem(url: url)
+        audioPlayer.replaceCurrentItem(with: playerItem)
+        audioPlayer.play()
+    }
+    
     // State variables for toggling animation.
     @State var circleAnimation = false
     @State var squareAnimation = false
@@ -25,32 +44,25 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     
-                    Image("moon")
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                        .opacity(moonAnimation ? 0.2 : 1.0)
-                        .animation(Animation.easeInOut(duration: 1.0))
-                        .aspectRatio(contentMode: .fit)
-                        .onTapGesture {
-                            self.moonAnimation.toggle()
-                    }
                 }
-                .padding(.trailing, 40)
+                .padding(.trailing, 20)
                 
-                Image("earth-night")
+                Image("deewarCover")
                     .resizable()
+                    .frame(width: 320, height: 550)
                     .aspectRatio(contentMode: .fit)
+                
             }
             
             // Title and subtitle.
             VStack {
                 VStack(alignment: .leading) {
-                    Text("Title")
+                    Text("Junoon")
                         .font(.custom("Helvetica-Light", size: 80))
                         .foregroundColor(Color.white)
                     
                     HStack {
-                        Text("Subtitle")
+                        Text("Top Songs")
                             .font(.custom("Helvetica", size: 20))
                             .foregroundColor(.white)
                         
@@ -68,40 +80,44 @@ struct ContentView: View {
                 Spacer()
                 
                 HStack(spacing: 20) {
-                    Circle()
-                        .fill(Color.red)
+                    Image("ishq")
+                        .resizable()
                         .frame(width: 80, height: 80)
-                        .scaleEffect(circleAnimation ? 1.5 : 1.0)
+                        .opacity(moonAnimation ? 0.2 : 1.0)
                         .animation(Animation.easeInOut(duration: 1.0))
+                        .aspectRatio(contentMode: .fit)
                         .onTapGesture {
-                            self.circleAnimation.toggle()
+                           let sound = self.sounds[0]
+                            self.playSound(filename: sound)
                     }
                     
-                    Rectangle()
-                        .fill(Color.green)
+                    Image("talaash")
+                        .resizable()
                         .frame(width: 80, height: 80)
-                        .rotationEffect(squareAnimation ? .degrees(315) : .degrees(0))
+                        .opacity(moonAnimation ? 0.2 : 1.0)
                         .animation(Animation.easeInOut(duration: 1.0))
+                        .aspectRatio(contentMode: .fit)
                         .onTapGesture {
-                            self.squareAnimation.toggle()
+                            let sound = self.sounds[1]
+                            self.playSound(filename: sound)
+                    }
+                    
+                    Image("azadi")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .opacity(moonAnimation ? 0.2 : 1.0)
+                        .animation(Animation.easeInOut(duration: 1.0))
+                        .aspectRatio(contentMode: .fit)
+                        .onTapGesture {
+                            let sound = self.sounds[0]
+                            self.playSound(filename: sound)
+                            
                     }
                     
                     // Custom path drawing for equilateral triangle.
-                    Path { path in
-                        path.move(to: CGPoint(x: 46.2, y: 0))
-                        path.addLine(to: CGPoint(x: 92.4, y: 80))
-                        path.addLine(to: CGPoint(x: 0, y: 80))
-                    }
-                    .offset(x: 0, y: -12.4)
-                    .fill(Color.blue)
-                    .frame(width: 92.4, height: 80)
-                    .offset(x: 0, y:  triangleAnimation ? -300 : 12.4)
-                    .animation(Animation.easeInOut(duration: 1.0))
-                    .onTapGesture {
-                        self.triangleAnimation.toggle()
-                    }
+                    
                 }
-                .padding(.bottom, 80)
+                .padding(.bottom, 40)
             }
             
         }
