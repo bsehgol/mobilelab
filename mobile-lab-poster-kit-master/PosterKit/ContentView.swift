@@ -11,9 +11,9 @@ import AVFoundation
 
 
 struct ContentView: View {
-    let sounds = ["ishq",
-    "talaash",
-    "azadi"]
+    let sounds = ["ishq.m4a",
+    "talaash.MP3",
+    "azadi.MP3"]
     
     // Player for sound clips.
     let audioPlayer = AVPlayer()
@@ -21,12 +21,11 @@ struct ContentView: View {
   // Play sound helper method.
      // Play sound helper method.
      func playSound(filename: String) {
-         guard let url = Bundle.main.url(forResource: filename, withExtension: "MP3") else { return }
+         guard let url = Bundle.main.url(forResource: filename, withExtension: "") else { return }
          
          let playerItem = AVPlayerItem(url: url)
          audioPlayer.replaceCurrentItem(with: playerItem)
          audioPlayer.play()
-//         audioPlayer.pause()
      }
     
     // State variables for toggling animation.
@@ -52,6 +51,7 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                     .onTapGesture {
                         self.audioPlayer.pause()
+                        self.imageAnimation.toggle()
                     }
                 
             }
@@ -78,8 +78,7 @@ struct ContentView: View {
             
             // Shapes.
             VStack {
-                Spacer()
-                
+                 Spacer()
                 HStack(spacing: 20) {
                     Image("ishq")
                         .resizable()
@@ -93,7 +92,6 @@ struct ContentView: View {
                             self.playSound(filename: sound)
                         
                     }
-                    
                     Image("talaash")
                         .resizable()
                         .frame(width: 80, height: 80)
@@ -105,7 +103,6 @@ struct ContentView: View {
                             let sound = self.sounds[1]
                             self.playSound(filename: sound)
                     }
-                    
                     Image("azadi")
                         .resizable()
                         .frame(width: 80, height: 80)
@@ -115,7 +112,7 @@ struct ContentView: View {
                         .onTapGesture {
                             self.imageAnimation.toggle()
                             let sound = self.sounds[2]
-                            self.playSound(filename: sound)                            
+                            self.playSound(filename: sound)
                     }
                     
                     // Custom path drawing for equilateral triangle.
