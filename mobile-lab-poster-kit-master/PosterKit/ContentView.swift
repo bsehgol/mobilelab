@@ -11,28 +11,26 @@ import AVFoundation
 
 
 struct ContentView: View {
+    let sounds = ["ishq",
+    "talaash",
+    "azadi"]
     
     // Player for sound clips.
     let audioPlayer = AVPlayer()
-    
-    let sounds = ["azadi",
-                  "talaash",
-                  "ishq"]
-    
-    // Play sound helper method.
-    func playSound(filename: String) {
-        guard let url = Bundle.main.url(forResource: filename, withExtension: "") else { return }
         
-        let playerItem = AVPlayerItem(url: url)
-        audioPlayer.replaceCurrentItem(with: playerItem)
-        audioPlayer.play()
-    }
+  // Play sound helper method.
+     // Play sound helper method.
+     func playSound(filename: String) {
+         guard let url = Bundle.main.url(forResource: filename, withExtension: "MP3") else { return }
+         
+         let playerItem = AVPlayerItem(url: url)
+         audioPlayer.replaceCurrentItem(with: playerItem)
+         audioPlayer.play()
+     }
     
     // State variables for toggling animation.
-    @State var circleAnimation = false
-    @State var squareAnimation = false
-    @State var triangleAnimation = false
-    @State var moonAnimation = false
+
+    @State var imageAnimation = false
     
     var body: some View {
         ZStack {
@@ -57,18 +55,16 @@ struct ContentView: View {
             // Title and subtitle.
             VStack {
                 VStack(alignment: .leading) {
-                    Text("Junoon")
-                        .font(.custom("Helvetica-Light", size: 80))
+                    Text("  Junoon")
+                        .font(.custom("Helvetica-Light", size: 60))
                         .foregroundColor(Color.white)
                     
                     HStack {
-                        Text("Top Songs")
+                        Text("Ishq (Love), Azadi (Freedom)")
                             .font(.custom("Helvetica", size: 20))
                             .foregroundColor(.white)
-                        
-                        Spacer()
                     }
-                    
+            
                     Spacer()
                 }
             }
@@ -83,21 +79,24 @@ struct ContentView: View {
                     Image("ishq")
                         .resizable()
                         .frame(width: 80, height: 80)
-                        .opacity(moonAnimation ? 0.2 : 1.0)
+                        .opacity(imageAnimation ? 0.2 : 1.0)
                         .animation(Animation.easeInOut(duration: 1.0))
                         .aspectRatio(contentMode: .fit)
                         .onTapGesture {
-                           let sound = self.sounds[0]
+                            self.imageAnimation.toggle()
+                            let sound = self.sounds[0]
                             self.playSound(filename: sound)
+                        
                     }
                     
                     Image("talaash")
                         .resizable()
                         .frame(width: 80, height: 80)
-                        .opacity(moonAnimation ? 0.2 : 1.0)
+                        .opacity(imageAnimation ? 0.2 : 1.0)
                         .animation(Animation.easeInOut(duration: 1.0))
                         .aspectRatio(contentMode: .fit)
                         .onTapGesture {
+                            self.imageAnimation.toggle()
                             let sound = self.sounds[1]
                             self.playSound(filename: sound)
                     }
@@ -105,11 +104,12 @@ struct ContentView: View {
                     Image("azadi")
                         .resizable()
                         .frame(width: 80, height: 80)
-                        .opacity(moonAnimation ? 0.2 : 1.0)
+                        .opacity(imageAnimation ? 0.2 : 1.0)
                         .animation(Animation.easeInOut(duration: 1.0))
                         .aspectRatio(contentMode: .fit)
                         .onTapGesture {
-                            let sound = self.sounds[0]
+                            self.imageAnimation.toggle()
+                            let sound = self.sounds[2]
                             self.playSound(filename: sound)
                             
                     }
@@ -122,6 +122,14 @@ struct ContentView: View {
             
         }
         .edgesIgnoringSafeArea(.all)
+               .onAppear() {
+                   do {
+                      // Override device mute control.
+                      try AVAudioSession.sharedInstance().setCategory(.playback)
+                   } catch(let error) {
+                       print(error.localizedDescription)
+                   }
+               }
         
     }
 }
