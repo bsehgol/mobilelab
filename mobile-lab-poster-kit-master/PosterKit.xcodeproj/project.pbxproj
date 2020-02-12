@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615607A623F49E8D00994228 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 615607A523F49E8D00994228 /* Sounds */; };
 		615607A823F4A0AE00994228 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615607A723F4A0AD00994228 /* ContentView.swift */; };
+		615607AD23F4A47100994228 /* talaash.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 615607AA23F4A47100994228 /* talaash.MP3 */; };
+		615607AE23F4A47100994228 /* azadi.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 615607AB23F4A47100994228 /* azadi.MP3 */; };
+		615607AF23F4A47100994228 /* ishq.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 615607AC23F4A47100994228 /* ishq.MP3 */; };
 		6A8BE24B23EC56E1002AF110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8BE24A23EC56E1002AF110 /* AppDelegate.swift */; };
 		6A8BE24D23EC56E1002AF110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8BE24C23EC56E1002AF110 /* SceneDelegate.swift */; };
 		6A8BE25123EC56E2002AF110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8BE25023EC56E2002AF110 /* Assets.xcassets */; };
@@ -17,8 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		615607A523F49E8D00994228 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		615607A723F4A0AD00994228 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		615607AA23F4A47100994228 /* talaash.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = talaash.MP3; sourceTree = "<group>"; };
+		615607AB23F4A47100994228 /* azadi.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azadi.MP3; sourceTree = "<group>"; };
+		615607AC23F4A47100994228 /* ishq.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ishq.MP3; sourceTree = "<group>"; };
 		6A8BE24723EC56E1002AF110 /* Poster Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poster Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A8BE24A23EC56E1002AF110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A8BE24C23EC56E1002AF110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		615607A923F4A47100994228 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				615607AA23F4A47100994228 /* talaash.MP3 */,
+				615607AB23F4A47100994228 /* azadi.MP3 */,
+				615607AC23F4A47100994228 /* ishq.MP3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		6A8BE23E23EC56E1002AF110 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +78,7 @@
 				6A8BE25023EC56E2002AF110 /* Assets.xcassets */,
 				6A8BE25E23EC6DDA002AF110 /* LaunchScreen.storyboard */,
 				6A8BE25823EC56E2002AF110 /* Info.plist */,
-				615607A523F49E8D00994228 /* Sounds */,
+				615607A923F4A47100994228 /* Sounds */,
 				6A8BE25223EC56E2002AF110 /* Preview Content */,
 			);
 			path = PosterKit;
@@ -136,10 +150,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				615607AE23F4A47100994228 /* azadi.MP3 in Resources */,
 				6A8BE25F23EC6DDA002AF110 /* LaunchScreen.storyboard in Resources */,
 				6A8BE25423EC56E2002AF110 /* Preview Assets.xcassets in Resources */,
-				615607A623F49E8D00994228 /* Sounds in Resources */,
 				6A8BE25123EC56E2002AF110 /* Assets.xcassets in Resources */,
+				615607AD23F4A47100994228 /* talaash.MP3 in Resources */,
+				615607AF23F4A47100994228 /* ishq.MP3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
