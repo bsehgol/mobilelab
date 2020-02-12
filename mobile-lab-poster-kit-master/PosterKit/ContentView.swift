@@ -26,6 +26,7 @@ struct ContentView: View {
          let playerItem = AVPlayerItem(url: url)
          audioPlayer.replaceCurrentItem(with: playerItem)
          audioPlayer.play()
+//         audioPlayer.pause()
      }
     
     // State variables for toggling animation.
@@ -49,6 +50,9 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: 320, height: 550)
                     .aspectRatio(contentMode: .fit)
+                    .onTapGesture {
+                        self.audioPlayer.pause()
+                    }
                 
             }
             
@@ -63,6 +67,7 @@ struct ContentView: View {
                         Text("Ishq (Love), Azadi (Freedom)")
                             .font(.custom("Helvetica", size: 20))
                             .foregroundColor(.white)
+                       
                     }
             
                     Spacer()
@@ -110,8 +115,7 @@ struct ContentView: View {
                         .onTapGesture {
                             self.imageAnimation.toggle()
                             let sound = self.sounds[2]
-                            self.playSound(filename: sound)
-                            
+                            self.playSound(filename: sound)                            
                     }
                     
                     // Custom path drawing for equilateral triangle.
