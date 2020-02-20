@@ -1,6 +1,6 @@
 # This is an attempt...
 
-## Egg timer ideation & drawing up a wire frame
+## Egg timer ideation & drawing up a wireframe
 
 ![eggtimerwireframing](eggtimerwireframing.jpeg)
 
