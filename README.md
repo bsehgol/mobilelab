@@ -23,7 +23,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u2P-6bNUz5A?start=34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
+Please click [here](https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-timer-kit) to view the github folder for this project.
 
 
 
