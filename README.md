@@ -1,5 +1,13 @@
 # This is an attempt at making the worlds greatest egg timer in NYU's Mobile Lab class. 
 
+## Egg timer ideation, drawing up a wire frame
+
+![eggtimerwireframing](eggtimerwireframing.jpeg)
+
+## Inspiration from Rollex gone awry..
+
+![rollex](rollex.jpeg)
+
 
 ## On the third stage of development,  as intended red blinks every second, and comes into focus in 60 seconds, and then resets. Yellow is supposed to blink once a minute, so it looks blurry, on the 60th minute it is in full focus. Green is supposed to blink once every hour.
 
