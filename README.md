@@ -1,4 +1,4 @@
-# This is an attempt at making the worlds greatest egg timer in NYU's Mobile Lab class. 
+# This is an attempt...
 
 ## Egg timer ideation & drawing up a wire frame
 
