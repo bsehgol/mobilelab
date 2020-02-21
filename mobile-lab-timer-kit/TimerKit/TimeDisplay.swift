@@ -16,22 +16,20 @@ struct TimeDisplay: View {
 
         VStack{
             
-  
-                Circle()
+                    Circle()
                         .fill(Color.red)
                         .blur(radius: CGFloat(timeRemaining), opaque: false)
                         .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*timeRemaining)))
 
                     Circle()
                         .fill(Color.yellow)
-                        .blur(radius: CGFloat(timeRemaining*1.2), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*timeRemaining*1.2)))
+                        .blur(radius: CGFloat(timeRemaining+30), opaque: false)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*timeRemaining/3600)))
                         
                     Circle()
                        .fill(Color.green)
-                        .blur(radius: CGFloat(timeRemaining*1.6), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*timeRemaining*1.6)))
-            
+                        .blur(radius: CGFloat(timeRemaining+60), opaque: false)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*timeRemaining/21600)))
 
         }
             

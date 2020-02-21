@@ -50,7 +50,7 @@ struct ContentView: View {
             // Block gets called when timer updates.
 
                 // If timeRemaining and timer is running, count down.
-                if self.timeRemaining > 0 && self.timerIsRunning {
+                if self.timeRemaining > -21600 && self.timerIsRunning {
                     self.timeRemaining -= 1
 
                     
