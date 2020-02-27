@@ -1,4 +1,4 @@
-## Mobile Lab - Missile Launch Game
+## Mobile Lab - Missile Launch Game, February 27, 2020
 
 1. I understood that Gameboard like canvas of draw() is where functions are being called. CollisionObjects and Avatar classes are called here with avatarPosition parameters/variables passed in them. 
 
@@ -133,6 +133,7 @@ struct ContentView_Previews: PreviewProvider {
 10. Next steps would be to improve the gameflow by adding more directions to missile (right now change is unidirectional on y-axis) and adding Vector/momentum to the GameBoard.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JucEOUQy76k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 11. Code
 https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-game-kit
