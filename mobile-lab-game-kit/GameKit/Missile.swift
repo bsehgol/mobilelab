@@ -8,21 +8,15 @@
 
 import SwiftUI
 
-struct Avatar: View {
+struct Missile: View {
     var position: CGPoint
     
     var body: some View {
         ZStack {
-            Path { path in
-                path.move(to: CGPoint(x: 25, y: 0))
-                path.addLine(to: CGPoint(x: 50, y: 50))
-                path.addLine(to: CGPoint(x: 0, y: 50))
-            }
-            .fill(Color.green)
             
             Circle()
                 .fill(Color.black)
-                .frame(width: 10.0, height: 10.0)
+                .frame(width: 100.0, height: 10.0)
         }
         .frame(width: 50, height: 50)
         .position(position)
@@ -32,10 +26,10 @@ struct Avatar: View {
     
 }
 
-struct Avatar_Previews: PreviewProvider {
+struct Missile_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
-            Avatar(position: CGPoint(x: geometry.size.width / 2, y:  geometry.size.height / 2))
+            Missile(position: CGPoint(x: geometry.size.width / 2, y:  geometry.size.height / 2))
         }
     }
 }

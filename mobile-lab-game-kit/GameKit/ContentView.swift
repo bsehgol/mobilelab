@@ -10,19 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     @State var avatarPosition = CGPoint(x: 0, y: 0)
+    @State var missilePosition = CGPoint(x: 0, y: 0)
     
     var body: some View {
         GeometryReader { geometry in
             Color.white
 
             ZStack {
-                GameBoard(avatarPosition: self.avatarPosition)
+                GameBoard(avatarPosition: self.avatarPosition, missilePosition: self.missilePosition)
 
                 VStack {
                     Spacer()
                     HStack {
                         Spacer()
-                        ControllerButtons(avatarPosition: self.$avatarPosition)
+                        ControllerButtons(avatarPosition: self.$avatarPosition, missilePosition: self.$missilePosition)
                         Spacer()
                     }
                     .padding()
@@ -31,6 +32,7 @@ struct ContentView: View {
             .onAppear() {
                 // Initialize position to center of the screen.
                 self.avatarPosition = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                self.missilePosition = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
             }
         }
     }

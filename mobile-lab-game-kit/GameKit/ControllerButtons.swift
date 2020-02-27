@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ControllerButtons: View {
     @Binding var avatarPosition: CGPoint
+     @Binding var missilePosition: CGPoint
 
     var body: some View {
         HStack {
@@ -56,6 +57,17 @@ struct ControllerButtons: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(30)
             }
+            
+            Button(action: {
+                self.missilePosition.y += 20
+            }) {
+                Text("Firrre")
+                    .font(.system(size: 14))
+                    .frame(width: 60, height: 44)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(30)
+            }
         }
         .padding()
         .border(Color.black, width: 3)
@@ -64,6 +76,6 @@ struct ControllerButtons: View {
 
 struct ControllerButtons_Previews: PreviewProvider {
     static var previews: some View {
-        ControllerButtons(avatarPosition: .constant(CGPoint(x: 0, y: 0)))
+        ControllerButtons(avatarPosition: .constant(CGPoint(x: 0, y: 0)), missilePosition: .constant(CGPoint(x: 0, y: 0)))
     }
 }

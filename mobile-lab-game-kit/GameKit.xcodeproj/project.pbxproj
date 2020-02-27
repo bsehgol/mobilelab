@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6165F5FE240754320005E2A3 /* Missile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165F5FD240754320005E2A3 /* Missile.swift */; };
 		6A7DA57B23FECAD500DBB519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7DA57A23FECAD500DBB519 /* AppDelegate.swift */; };
 		6A7DA57D23FECAD500DBB519 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7DA57C23FECAD500DBB519 /* SceneDelegate.swift */; };
 		6A7DA57F23FECAD500DBB519 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7DA57E23FECAD500DBB519 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6165F5FD240754320005E2A3 /* Missile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Missile.swift; sourceTree = "<group>"; };
 		6A7DA57723FECAD500DBB519 /* Game Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7DA57A23FECAD500DBB519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A7DA57C23FECAD500DBB519 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				6A7DA59223FEDB7100DBB519 /* ControllerButtons.swift */,
 				6A7DA59023FED71C00DBB519 /* GameBoard.swift */,
 				6A7DA58E23FED02500DBB519 /* Avatar.swift */,
+				6165F5FD240754320005E2A3 /* Missile.swift */,
 				6A7DA59423FEDF3000DBB519 /* CollisionObject.swift */,
 				6A7DA58023FECAD600DBB519 /* Assets.xcassets */,
 				6A7DA59623FEE6D400DBB519 /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 				6A7DA59323FEDB7100DBB519 /* ControllerButtons.swift in Sources */,
 				6A7DA58F23FED02500DBB519 /* Avatar.swift in Sources */,
 				6A7DA59523FEDF3000DBB519 /* CollisionObject.swift in Sources */,
+				6165F5FE240754320005E2A3 /* Missile.swift in Sources */,
 				6A7DA57F23FECAD500DBB519 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

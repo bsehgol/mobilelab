@@ -11,6 +11,7 @@ import SwiftUI
 struct CollisionObject: View {
     var position: CGPoint
     var avatarPosition: CGPoint
+    var missilePosition: CGPoint
     
     let size: CGFloat = 80
     
@@ -19,9 +20,12 @@ struct CollisionObject: View {
         if (position.x - size / 2.0) < avatarPosition.x && avatarPosition.x < (position.x + size / 2.0) &&
             (position.y - size / 2.0) < avatarPosition.y && avatarPosition.y < (position.y + size / 2.0) {
                 return true
-            } else {
-                return false
-            }
+            } else if (position.x - size / 2.0) < missilePosition.x && missilePosition.x < (position.x + size / 2.0) &&
+            (position.y - size / 2.0) < missilePosition.y && missilePosition.y < (position.y + size / 2.0) {
+                return true
+            }else {
+                    return false
+                }
         }
         
         var body: some View {
@@ -38,7 +42,7 @@ struct CollisionObject: View {
     struct CollisionObject_Previews: PreviewProvider {
         static var previews: some View {
             GeometryReader { geometry in
-                CollisionObject(position: CGPoint(x: geometry.size.width / 2, y:  geometry.size.height / 2), avatarPosition: CGPoint(x: 0, y: 0))
+                CollisionObject(position: CGPoint(x: geometry.size.width / 2, y:  geometry.size.height / 2), avatarPosition: CGPoint(x: 0, y: 0), missilePosition: CGPoint(x: 0, y: 0))
             }
         }
 }
