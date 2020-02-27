@@ -1,12 +1,12 @@
 ## Mobile Lab - Missile Launch Game, February 27, 2020
 
-1. I understood that Gameboard like canvas of draw() is where functions are being called. CollisionObjects and Avatar classes are called here with avatarPosition parameters/variables passed in them. 
+I understood that Gameboard like canvas of draw() is where functions are being called. CollisionObjects and Avatar classes are called here with avatarPosition parameters/variables passed in them. 
 
-2. The classes are defined in separate files whose names match the class names. Variables are passed through eachother using the bind term.
+The classes are defined in separate files whose names match the class names. Variables are passed through eachother using the bind term.
 
-3. The next logical step in this game was to have a missile fire and hit collisionObjects - and a condition similar to isAvatarInside inside collisionObject's fade should become true.
+The next logical step in this game was to have a missile fire and hit collisionObjects - and a condition similar to isAvatarInside inside collisionObject's fade should become true.
 
-4. After thinking for a while and figuring out how the flow of code works, I started by getting a "fire" button ready in ControllerButtons.
+After thinking for a while and figuring out how the flow of code works, I started by getting a "fire" button ready in ControllerButtons.
 
 ```markdown
 Button(action: {
@@ -20,7 +20,7 @@ Button(action: {
                     .cornerRadius(30)
             }
 ```
-5. Then created a new file Missile.swift, similar to Avatar.swift -
+Then created a new file Missile.swift, similar to Avatar.swift -
 
 ```markdown
 import SwiftUI
@@ -46,7 +46,7 @@ struct Missile_Previews: PreviewProvider {
 }
 ```
 
-6. And updated Gameboard to include Missile(). Previews structs were updated on the go
+And updated Gameboard to include Missile(). Previews structs were updated on the go
 
 ```markdown
 import SwiftUI
@@ -77,7 +77,7 @@ struct GameBoard_Previews: PreviewProvider {
     }
 }
 ```
-7. Then added logic similar to isAvatarInside() the CollisionObject - instead of writing a separate function, and calling it in other places, I chose not to repeat myself, and add else if statement:
+ Then added logic similar to isAvatarInside() the CollisionObject - instead of writing a separate function, and calling it in other places, I chose not to repeat myself, and add else if statement:
 
 ```markdown
 func isAvatarInside() -> Bool {
@@ -92,7 +92,7 @@ func isAvatarInside() -> Bool {
                 }
         }
 ```
-8. Finally, ContentView was updated to pass missilePosition parameters in classes GameBoard and ControllerButtons, and initializing missilePosition
+Finally, ContentView was updated to pass missilePosition parameters in classes GameBoard and ControllerButtons, and initializing missilePosition
 
 ```markdown
 import SwiftUI
@@ -128,15 +128,14 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
-9. In conclusion, the interaction I had set out to do - firing missile to Collision Object and for Object to fade, succeeded. However, this took more time than it seems to figure out how things worked and then iteratively coding the solution and making sure things worked along the way. And I was happy when my Build Succeeded.
+ In conclusion, the interaction I had set out to do - firing missile to Collision Object and for Object to fade, succeeded. However, this took more time than it seems to figure out how things worked and then iteratively coding the solution and making sure things worked along the way. And I was happy when my Build Succeeded.
 
-10. Next steps would be to improve the gameflow by adding more directions to missile (right now change is unidirectional on y-axis) and adding Vector/momentum to the GameBoard.
+ Next steps would be to improve the gameflow by adding more directions to missile (right now change is unidirectional on y-axis) and adding Vector/momentum to the GameBoard.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JucEOUQy76k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-11. Code
-https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-game-kit
+Code: https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-game-kit
 
 
 
