@@ -1,4 +1,4 @@
-# Mobile Lab 
+
 
 ## Missile Launch Game, February 27, 2020
 
