@@ -1,5 +1,5 @@
 //
-//  Avatar.swift
+//  Missile.swift
 //  GameKit
 //
 //  Created by Nien Lam on 2/20/20.
