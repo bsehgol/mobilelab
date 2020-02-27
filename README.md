@@ -1,5 +1,3 @@
-
-
 ## Missile Launch Game, February 27, 2020
 
 I understood that Gameboard like canvas of draw() is where functions are being called. CollisionObjects and Avatar classes are called here with avatarPosition parameters/variables passed in them. 
