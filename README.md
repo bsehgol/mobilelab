@@ -135,7 +135,7 @@ struct ContentView_Previews: PreviewProvider {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JucEOUQy76k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Code: https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-game-kit
+Code: [github](https://github.com/bsehgol/mobilelab/tree/master/mobile-lab-game-kit)
 
 
 
