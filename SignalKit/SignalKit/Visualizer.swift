@@ -29,6 +29,11 @@ struct Visualizer: View {
                        .fill(Color.blue)
                         .blur(radius: CGFloat(signal.floatValue*200), opaque: signal.toggleValue)
                         .transformEffect(CGAffineTransform(rotationAngle: CGFloat(20*signal.floatValue)))
+                
+                    Circle()
+                     .fill(Color.purple)
+                     .blur(radius: CGFloat(signal.floatValue*200), opaque: signal.toggleValue)
+                     .transformEffect(CGAffineTransform(rotationAngle: CGFloat(20*signal.floatValue)))
 
         }
             
