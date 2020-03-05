@@ -24,7 +24,7 @@ struct ContentView: View {
         VStack {
             Controller(signal: $signal)
             Spacer()
-            Visualizer(signal: signal)
+            Visualizer(signal: $signal)
         }
     }
 }

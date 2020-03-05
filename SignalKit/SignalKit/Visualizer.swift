@@ -9,26 +9,27 @@ import SwiftUI
 
 struct Visualizer: View {
     // Binding variable.
-    @Binding var signal: Double
+    @Binding var signal: Signal
 
     var body: some View {
 
         VStack{
             
-                    Circle()
+                  Circle()
                         .fill(Color.red)
-                        .blur(radius: CGFloat(signal), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal)))
+                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
 
                     Circle()
                         .fill(Color.yellow)
-                        .blur(radius: CGFloat(signal+30), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal/3600)))
+                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
+            
                         
                     Circle()
                        .fill(Color.green)
-                        .blur(radius: CGFloat(signal+60), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal/21600)))
+                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
 
         }
             
@@ -37,7 +38,7 @@ struct Visualizer: View {
 
 struct Visualizer_Previews: PreviewProvider {
     static var previews: some View {
-      Visualizer(signal: .constant(80))
+        Visualizer(signal: .constant(Signal(intValue: 0, floatValue: 0.0, toggleValue: false)))
 
     }
 }
