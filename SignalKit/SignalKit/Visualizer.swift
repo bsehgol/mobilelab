@@ -17,19 +17,18 @@ struct Visualizer: View {
             
                   Circle()
                         .fill(Color.red)
-                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
+                        .blur(radius: CGFloat(signal.floatValue*200), opaque: signal.toggleValue)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(20*signal.floatValue)))
 
                     Circle()
-                        .fill(Color.yellow)
-                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
+                        .fill(Color.green)
+                        .blur(radius: CGFloat(signal.floatValue*200), opaque: false)
                         .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
             
-                        
                     Circle()
-                       .fill(Color.green)
-                        .blur(radius: CGFloat(signal.floatValue), opaque: false)
-                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(.pi*signal.floatValue)))
+                       .fill(Color.blue)
+                        .blur(radius: CGFloat(signal.floatValue*200), opaque: signal.toggleValue)
+                        .transformEffect(CGAffineTransform(rotationAngle: CGFloat(20*signal.floatValue)))
 
         }
             
