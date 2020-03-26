@@ -12,7 +12,7 @@ struct DetailView: View {
     var artist: Artist
 
     var body: some View {
-        Text(artist.name)
+        Text(artist.bio)
     }
 }
 
