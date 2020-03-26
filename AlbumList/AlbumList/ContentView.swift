@@ -48,10 +48,22 @@ class AppModel: ObservableObject {
         let artist6 = Artist(name: "Encourage pretend play", bio:"Likes to hand things to others as play Says several single words Walks alone")
         let album6 = Album(name: "18 Month Old", image: "18monthsold", artist: artist6)
         albums.append(album6)
-//
-//        let artist3 = Artist(name: "Weezer", bio:"")
-//        let album3 = Album(name: "Weezer", image: "weezer", artist: artist3)
-//        albums.append(album3)
+
+        let artist7 = Artist(name: "Hide your child’s toys around the room and let him find them.", bio:"Gets excited when with other children Points to things or pictures when they are named Builds towers of 4 or more blocks")
+        let album7 = Album(name: "2 Year Old", image: "2yearold", artist: artist7)
+        albums.append(album7)
+        
+        let artist8 = Artist(name: "Work with your child to solve the problem when he is upset.", bio:"Copies adults and friends Follows instructions with 2 or 3 steps Can work toys with buttons, levers, and moving parts")
+        let album8 = Album(name: "3 Year Old", image: "3yearold", artist: artist8)
+        albums.append(album8)
+        
+        let artist9 = Artist(name: "Teach your child to play outdoor games like tag, follow the leader, and duck, duck, goose.", bio:"Enjoys doing new things Sings a song or says a poem from memory such as the “Itsy Bitsy Spider” or the “Wheels on the Bus” Understands the idea of “same” and “different”")
+        let album9 = Album(name: "4 Year Old", image: "4yearold", artist: artist9)
+        albums.append(album9)
+        
+        let artist10 = Artist(name: "Help your child climb on the monkey bars.", bio:"Wants to be like friends Tells a simple story using full sentences Copies a triangle and other geometric shapes")
+        let album10 = Album(name: "5 Year Old", image: "5yearold", artist: artist10)
+        albums.append(album10)
 
     }
 }
