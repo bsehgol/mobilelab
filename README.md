@@ -1,4 +1,23 @@
-## Missile Launch Game, February 27, 2020
+## AR Concepts and Prototypes, April 2, 2020
+
+
+### AR Health
+Parents are interested in monitoring their baby's growth and would like to know what percentile their child achieves at any given time. For this Length for Age Growth Chart is used as a WHO global standard. The data visualizations would be borrowed from Tableaue, and the data would be input by parents of their childs length. The AR functionality would enable them to measure the childs length, so essentially it's a measurement functionality, that takes a data point and plots on a data visualization. 
+The idea simply builds on my [mid-term prototype that I did for Mobile Lab](https://github.com/bsehgol/mobilelab/tree/master/AlbumList), and the prototype I made in [Designing Meaningful Interactions](https://docs.google.com/presentation/d/1TQLh7voBu38-lmutn6xNgSHd5Siux_7GFiWE5iWaC7k/edit). 
+
+### AR Learning 
+Human anatomy is complicated, and biology students would benefit from an app that when the camera is focused on a human body, draws out the human anatomy, the organs, the muscules, the different biological systems on the top of it. They could further tap into one of those systems visualization to see the details of what it is all about. Another cognitive adaptation would to help children learn names of shapes by the AR telling them to go, as in poke-mon-go, for Cubes or boxes in their environment, or cylinders in their environment to help them learn names of different shapes, more snaps they collect of those shapes, more points they get. 
+
+### AR Retail 
+Now this is such a good idea that I am going to share only one version of it. I discussed it with one of my friends who works in an FMCG brand in Singapore. So the idea is that you're doing groceries at KeyFoods, and you point your phone camera towards a product, and open the GAR App,the Grocery Augmented Reality App, and the app tells you whether to Buy, or not Buy it based on your nutritional plan already stored on it. So high carb foods would be alerted for, and a warning given, and high protien, high fibre foods would likely get a green signal. 
+
+
+
+
+
+
+
+## Projectile Launch Game, February 27, 2020
 
 I understood that Gameboard like canvas of draw() is where functions are being called. CollisionObjects and Avatar classes are called here with avatarPosition parameters/variables passed in them. 
 
