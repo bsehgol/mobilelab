@@ -1,3 +1,14 @@
+
+## Climate Justice Zoo - 3D AR App, May 7, 2020
+
+bit.ly/climate-justice-zoo-ar-app
+
+https://www.gofundme.com/manage/climate-justice-3d-app/
+
+https://www.youtube.com/watch?v=7rs5qrxi4_w&feature=youtu.be
+
+
+
 ## AR Concepts and Prototypes, April 2, 2020
 
 
